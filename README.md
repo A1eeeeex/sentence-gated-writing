@@ -1,47 +1,154 @@
 # Sentence-Gated Writing
 
-在多轮协作中，让每次修改进入同一份当前稿，并保持全文事实、意图和论述一致。
+**和 AI 一起写长文档，让多轮修改后的事实、主线和作者意图保持一致。**
 
-Collaborate on formal long documents while maintaining the argument, evidence, terminology, accepted decisions, and one current draft across revisions.
+A human-in-the-loop writing skill for keeping long documents coherent across revisions.
 
-**Sentence Gate is a verification boundary for high-impact statements, not the default unit of writing.** 默认根据问题选择全文、章节、段落、句子或局部修改。关键含义尚未确定时才展开讨论；有明确依据和授权时继续推进，不让用户逐句点头。
+适用于论文、技术报告和项目方案。它指导 Agent 维护全文主线、章节分工、事实依据和术语，在修改一处内容后检查受影响的上下文，并持续更新同一份当前稿。
 
-## Who and when
+[快速开始](#快速开始) · [使用示例](#使用示例) · [工作方式](#工作方式) · [验证与限制](#验证与限制) · [参与贡献](#参与贡献)
 
-For authors, researchers, and project owners developing papers, technical reports, or substantial proposals through multiple revisions. Useful when a changed definition, result, or conclusion affects other parts of the document. It is not a universal proofreader, humanizer, automatic paper generator, research service, or independent review system.
+> 当前为开发候选版，内容位于 `candidate/document-coherence-20260916` 分支。查看 [PR #1](https://github.com/A1eeeeex/sentence-gated-writing/pull/1)。
 
-“帮我修改这份报告，保留成立的结构；解释有实质影响的修改，更新当前稿，并同步受影响的摘要和结论。”
+## 它解决什么问题
 
-“把这个定义改成问题样本频率，并检查正文、表格和总结有没有仍按真实道路概率来解释。”
+写长文档时，困难往往出现在几轮修改之后：正文改了定义，摘要还在沿用旧含义；方法的适用范围缩小了，结论却仍然说得很满；讨论了很多段落，最后找不到一份完整的最新稿。
 
-For a simple local correction, do just that. Explicit sentence-by-sentence, complete-draft, and review-only requests remain supported. Red-team review is opt-in. Do not treat a factual clarification as approval of a candidate rewrite.
+Sentence-Gated Writing 把这些检查写成可重复使用的协作规则：
 
-## What the workflow maintains
+- **保持全文主线**：明确文档回答什么问题，以及每一章承担什么职责。
+- **传播必要修改**：定义、数据或结论变化后，检查正文、摘要、表格、图注和总结中的关联表述。
+- **守住事实与意图**：证据不足时缩小结论范围；作者认可措辞，不等于事实已经得到验证。
+- **保留有效内容**：选择最小充分的修改范围，避免每轮都重写已经成立的段落。
+- **交付完整当前稿**：将已确认修改落实到稿件，标明尚未解决的问题，方便继续协作。
 
-A current document intent, argument and section roles, consequential facts and terms, accepted decisions, unresolved issues, and the canonical draft. Use one working document and an optional compact note, not a large administrative system. Explain substantive changes with relevant before/after text and a reason. Propagate authorized semantic changes to dependent passages while preserving unaffected wording.
+普通聊天也能完成其中的操作。这个 Skill 的目标是让 Agent 在多轮写作中持续执行它们，减少作者反复提醒。
 
-The current draft may have visible unresolved items; it is not automatically a final or human-approved document. Respect local-only instructions and mark dependencies that remain inconsistent. Actual persistence depends on host tools; the Skill is a writing protocol, not a database or autonomous document monitor.
+## 快速开始
 
-## Core and profile
+需要一个能够读取本地文件并加载 Skill 的 AI Agent。Skill 本身是 Markdown 指令，无需 API Key 或额外运行服务；读写 Word、PDF 等格式需要所用 Agent 提供相应工具。
 
-Core governs coherence, facts, author intent, adaptive scope, sentence verification, propagation, and current-draft integrity. The optional [Technical / Analytical Writing Profile](references/technical-structure.md) contains existing technical-structure and engineering-expression guidance. Apply input/method/output only where it helps. Other specialized profiles are not implemented.
+### 1. 获取候选版
 
-Read [Product Definition v1](PRODUCT_DEFINITION.md) for scope, decisions, and five task walkthroughs. Professional quality means clear purpose, responsibilities, evidence boundaries, and relationships; adding jargon is not a goal.
+```bash
+git clone --branch candidate/document-coherence-20260916 --single-branch \
+  https://github.com/A1eeeeex/sentence-gated-writing.git
+```
 
-## Evidence
+也可以[下载候选版 ZIP](https://github.com/A1eeeeex/sentence-gated-writing/archive/refs/heads/candidate/document-coherence-20260916.zip)并解压。
 
-Ordinary chat can also perform these actions. The intended benefit is consistent execution across turns, not exclusive model capability. Prior short or scripted-feedback comparisons did not establish a clear quality or effort advantage. Historical [technicalization checks](evaluation/TECHNICALIZATION.md) used the previous default and are not the current product specification. See [evaluation plan](evaluation/PLAN.md) and [current behavior evidence](evaluation/PRODUCT_STATE.md). Human benefit and long-document comparative reliability remain unproven.
+### 2. 加载 Skill
 
-Development base 0.5.0; Product Definition v1 update 2026-09-16. Number unchanged. MIT; see [LICENSE](LICENSE). No runtime dependencies. Explicit-loading behavior tests do not prove automatic discovery or all-host compatibility.
+通过所用 Agent 的 Skill 安装入口添加这个目录。入口文件是根目录的 [`SKILL.md`](SKILL.md)，请保留旁边的 `references/` 目录。
 
-## Try the candidate
+如果 Agent 能读本地文件，也可以先显式加载试用：
 
-Download the candidate branch as a ZIP, or clone this repository and select that branch. The skill entry point is the root `SKILL.md`; retain `references/` beside it. In a host that loads local skills, add this folder using that host's skill installation mechanism and explicitly invoke `sentence-gated-writing` for the first trial. Host-specific installation and automatic triggering have not been validated here.
+```text
+请读取 sentence-gated-writing/SKILL.md，并按其中的规则协助我完成下面的写作任务。
+需要时读取它引用的文件。
+```
 
-Start with an existing document and say what may change. For example: “更新这份报告中的定义，并同步受影响的正文和结论；保留其它内容，交付完整当前稿。” Supply source material when a claim needs checking. You do not need to prepare the internal state fields yourself.
+这是一种当前会话的加载方式，不等于永久安装。各平台的安装路径和调用语法不同，目前未完成跨平台安装及自动触发验证。
 
-Supported guidance: adaptive editing, scoped change propagation, selective fact/intent discussion, and recoverable current-draft handoffs. Not provided: an independent database, continuous background monitoring, guaranteed fact verification, or an automatic research/format-conversion service. Document rendering and storage depend on the host.
+### 3. 提供稿件和任务
 
-Latest candidate checks and reproducible synthetic inputs: [development acceptance](evaluation/ACCEPTANCE.md). This is a review candidate, not evidence of better writing or lower human effort. No GitHub Release tag is implied by the development version.
+上传当前稿、相关来源材料，并说明读者、目标和允许修改的范围。例如：
 
-Maintainers can check packaging with `python3 tools/check_package.py`. The script checks structure and links only.
+```text
+使用 sentence-gated-writing 修改这份技术报告，读者是项目评审人员。
+重点检查全文主线和各章分工，保留已经成立的结构与表述。
+修改关键定义或结论时，同步检查摘要、正文和总结。
+只有事实或含义需要我判断时再问我，最后交付完整当前稿和重要修改说明。
+```
+
+不需要手动填写事实台账或章节状态表，Agent 会按任务需要维护这些信息。
+
+## 使用示例
+
+### 从材料开始写一章
+
+```text
+根据这些材料撰写“总体技术方案”一章，供项目评审使用。
+先明确这一章要回答什么、与详细设计如何分工，再完成草稿。
+不要把计划中的工作写成已完成成果，缺少依据的地方明确标出。
+```
+
+### 修改定义并检查全文
+
+```text
+把“真实道路发生概率”改为“问题样本中的出现频率”。
+检查所有依赖这个定义的解释和结论，保留不受影响的内容。
+告诉我哪些地方需要收缩结论，并更新完整稿件。
+```
+
+下面是这个任务的处理示意，不是实验结果：
+
+| 位置 | 原表述 | 需要检查或调整的内容 |
+| --- | --- | --- |
+| 方法 | 根据问题样本统计真实道路发生概率 | 限定为该问题样本集内的出现频率 |
+| 摘要 | 识别真实道路高发场景 | 如无代表性依据，改为识别该样本集中出现较多的场景 |
+| 结论 | 据此确定实际道路风险排序 | 样本频率不能单独支持风险排序，需要补充依据或收缩结论 |
+
+关键在于检查含义的变化及其后果，而不只是替换一个术语。
+
+### 限定局部修改
+
+```text
+只改第二段最后一句，不要重写整段或其它章节。
+如果这句话会影响别处，列出相关位置，暂时不要修改。
+```
+
+### 只审查，不改稿
+
+```text
+检查这个专家修改版有没有超出原始材料的结论。
+区分事实错误、证据不足和表达建议，只给审查意见，不修改正文。
+```
+
+## 工作方式
+
+Agent 先识别问题所在层级，再选择修改范围：主线问题处理全文结构，章节职责问题处理章节，局部措辞问题只改局部。通常会直接推进段落或章节，保留成立的内容，并在修改后检查相关上下文。
+
+**Sentence Gate 是关键表述的验证边界，不是每次只能写一句。** 核心定义、关键结论、方法边界和有争议的事实需要检查。依据与修改授权明确时，Agent 可以继续；只有关键事实、作者意思或已确认决策存在未解决冲突时，才需要讨论。你也可以明确要求逐句确认或直接产出完整草稿。
+
+协作过程中维护一份可识别的当前稿，必要时附一份简短工作备注。重要修改说明原因和影响；待确认内容保持可见，不把它们当成已经定稿。
+
+技术方案、方法与系统设计另有可选的 [Technical / Analytical Writing Profile](references/technical-structure.md)，用于检查输入输出、模块职责和转化关系。这些检查按需使用，不要求所有文档套同一种结构。
+
+## 验证与限制
+
+当前已完成包结构检查，以及合成案例中的四项行为验收：全文数据修改传播、局部编辑范围控制、旧备注恢复、仅审查不改正文。原始输入、输出和结果见[开发验收记录](evaluation/ACCEPTANCE.md)。
+
+这些检查覆盖有限，**尚不能证明真实长文档质量优于普通聊天，或能降低人工修改成本**。此前的短文本与脚本反馈对照也未确立明确优势。后续评测重点是多轮一致性、作者意图保留、无意义改写比例和结论漂移，见[评测计划](evaluation/PLAN.md)。
+
+本项目提供协作写作规则，不提供独立编辑器、后台文档监控或自动事实研究服务。文件保存、上下文容量和格式处理取决于所用 Agent；来源材料和模型判断仍可能出错。它也不以通用语法纠错、AI 去味或全自动论文生成为主要用途。
+
+## 文档导航
+
+| 文档 | 内容 |
+| --- | --- |
+| [SKILL.md](SKILL.md) | Agent 执行的核心规则 |
+| [产品定义](PRODUCT_DEFINITION.md) | 用户、范围、工作模式与任务示例 |
+| [交互示例](references/interaction-examples.md) | 确认、拒绝、局部修改和会话恢复的处理 |
+| [事实与表述检查](references/gates.md) | 事实依据、逻辑及关键结论的边界 |
+| [技术写作 Profile](references/technical-structure.md) | 技术段落结构与章节关系 |
+| [评测计划](evaluation/PLAN.md) | 如何检验多轮写作效果 |
+| [更新记录](CHANGELOG.md) | 版本与开发变更 |
+
+## 参与贡献
+
+欢迎通过 [Issues](https://github.com/A1eeeeex/sentence-gated-writing/issues) 报告使用问题，或提交改进 PR。项目由 [A1eeeeex](https://github.com/A1eeeeex) 维护。
+
+最有帮助的反馈包括：使用的 Agent 与模型、脱敏材料、任务和修改轮次、预期行为、实际结果。尤其欢迎能复现“定义改了但结论没跟上”“越改越偏离作者原意”等问题的案例。请不要提交未经授权的项目资料。
+
+修改行为规则时，请附上可复现案例和实际输出。只修改文档时，检查链接、示例与当前实现是否一致即可。公开仓库提供包结构及本地链接检查：
+
+```bash
+python3 tools/check_package.py
+```
+
+该检查不衡量写作质量。
+
+## 许可证
+
+[MIT](LICENSE)。
