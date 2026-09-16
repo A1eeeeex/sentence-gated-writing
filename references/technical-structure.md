@@ -78,3 +78,13 @@ Before: 项目包括场景库、评价和仿真三个模块。
 After: 原始场景描述经结构化整理形成场景条目。评价方法面向条目间的比较，目前尚未产生评价结果。另有两个经独立选取的条目已人工转换为仿真配置，尚未与评价过程衔接。
 
 A partial chain is more accurate than inventing a complete pipeline. Only write “评价结果用于筛选并转化场景” when the project actually implements that relationship.
+
+## Skeleton, boundary visibility and final technical objects
+
+Use the paragraph task to choose sentence functions before drafting; then apply the core rhythm. Review the assembled paragraph for repeated functions, broken transitions and fragments, including when every sentence was accepted individually. Summarize a recurring technical thread only at the detail level needed by that section. A paragraph outcome can be an artifact produced or actual use, without claiming it satisfies downstream requirements.
+
+Keep evidence scope internally; expose it where its omission would materially mislead. “该误差对应本次单组回放” can be necessary, while a generic “不能代表其它任何条件” after every paragraph is not. Scope precision is preferable to repeated defensive disclaimers.
+
+At technical handoff, inspect equations/operators, variables, units, numbering, table headings, cross-references and values separately from prose. Compare source and rendered output when available. For example, `x_ego(t)=v_ego(t),dt` is malformed: under an explicitly defined longitudinal-velocity model, position would be expressed as `x_ego(t)=x_ego(t0)+∫[t0,t] v_ego(τ)dτ`. Confirm axis, initial condition, time units and whether continuous integration or discrete sample accumulation is intended before proposing a repair. Do not invent a numerical integration method or silently certify a DOCX equation from uncertain extracted text. If rendering is unavailable, state the verification limit once.
+
+For additional source-bounded organization heuristics, read [expert-writing-patterns.md](expert-writing-patterns.md). The label does not establish expert-level output or empirical validity.

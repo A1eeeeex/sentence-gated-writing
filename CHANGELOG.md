@@ -1,5 +1,15 @@
 # Changelog
 
+## Unreleased — structure-first sentence calibration, 2026-09-16
+
+- Default important-paragraph Co-Writing to Deliberate Drafting; retain explicit Accelerated Drafting, issue-based Guided Revision, Review and local edits.
+- Use Paragraph Skeleton, author direction calibration and Paragraph Review before section integration. Acceptance is separate from evidence and exact-wording locks.
+- Add lightweight Evidence Pins, selective reader-visible boundaries and a separate hard-technical-object check.
+- Condense the core and relocate existing recovery, state and propagation detail to the interaction reference; preserve reliability requirements.
+- Add source-bounded writing heuristics with explicit limits on available expert material; no new quality gates or effectiveness claims.
+- Specify real-feedback B versus assume-accept C evaluation, including feedback costs and information differences. Reported simulation-chapter failures remain prospective regression targets until the artifact is supplied.
+
+
 ## Unreleased — collaborative writing focus, 2026-09-16
 
 - Recenter the existing core on understanding, organizing, drafting, author calibration, and integration. No new gates.

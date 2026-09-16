@@ -321,3 +321,74 @@ Actual reply:
 当前结果：目前仅形成采集方案，尚无数据、模型或试验结果，技术可行性仍待验证。
 
 总结：项目后续需通过试验检验方案能否实施，体验评分与车辆运动的关联研究作为后续方向，本阶段尚不作关联判断。
+
+## Structure-first rhythms — bounded behavior check, 2026-09-16
+
+Two fresh agents read the revised skill and relevant references without this evaluation file or parent history. One handled three sequential simulated user turns; the other received an assembled five-sentence paragraph. The parent inspected the actual replies below. This is not a real-human B arm, an A/B/C comparison, or a reproduction of the unavailable simulation chapter.
+
+The first reply offered one body sentence; the correction changed the proposed skeleton and first sentence, and retained the planned association scope. The introductory explanations were longer than strictly necessary, so naturalness and interaction cost remain open questions. On the explicit assume-accept request, the agent delivered a complete paragraph without pausing or claiming human approval. The separate paragraph review identified sentences 2/4 as redundant, proposed removing/merging wording while retaining meaning, and honored the request not to finalize. These outputs do not establish internal reasoning execution or broad quality improvement. No new long-horizon recovery/propagation run was made for this snapshot.
+
+### Default co-writing
+
+Simulated user:
+
+我们一起写这一段技术路线。材料：目前已形成车辆速度、加速度与人工体验评分的采集方案；后续拟按试验编号配对；尚无配对数据、模型或试验结果。我还没想好段落怎么组织，你来带着写。
+
+Actual reply:
+
+我会用 sentence-gated-writing 的协作方式，先帮你定段落结构，再写一句供你校准，接着往下推进。
+
+这段建议按“已有基础 → 后续配对安排 → 当前阶段”组织：先交代采集方案已经形成，再说明拟按试验编号配对，最后用简短表述交代尚无配对数据、模型和试验结果。这样读者能看清技术路线准备从哪里出发、下一步做什么。
+
+先写开头这一句：
+
+> 目前已形成车辆速度、加速度与人工体验评分的采集方案。
+
+这句把段落起点放在已经完成的方案工作上。你看是否合适，还是更想先突出后续配对的安排？
+
+### Direction calibration
+
+Simulated user:
+
+不是要介绍现状，这段先说明为什么要把两类记录关联起来，方案完成情况放后面。研究方向是探索运动与体验的关系，不是已经能预测体验。请调整。
+
+Actual reply:
+
+明白，这段应先说明关联两类记录的研究目的，再介绍具体安排和已有基础。结构调整为“为何关联 → 拟如何配对 → 方案完成情况”，研究目标明确为探索运动与体验的关系。
+
+开头改为：
+
+> 为探索车辆运动与人工体验评分之间的关系，拟将描述车辆运动的速度、加速度记录与反映体验评价的人工评分关联起来。
+
+这句先交代两类记录各自提供的信息，以及将它们关联起来的目的。这里用“人工体验评分”明确我们实际观察的体验指标，你看是否符合你的意思？
+
+### Explicit acceleration
+
+Simulated user:
+
+假设每句我都认可，接下来不用停，直接给我完整段落，150字以内，仍以已有材料为准。
+
+Actual reply:
+
+为探索车辆运动与体验的关系，拟关联描述车辆运动的速度、加速度记录与反映体验评价的人工评分，按试验编号配对，建立同次试验中两类记录的对应关系。目前已形成采集方案，尚无配对数据、模型或试验结果。
+
+### Paragraph review
+
+Simulated user:
+
+我们刚才逐句确认了以下五句，现在看这一段是否顺畅，先提修改不要直接替我定稿：1.人工评分用于记录参与者体验。2.速度和加速度记录用于描述车辆运动。3.后续拟按试验编号关联两类记录。4.车辆运动过程通过速度与加速度记录描述。5.目前已形成采集方案，尚无配对数据或试验结果。事实就这些，不能扩大成果。
+
+Actual reply:
+
+我按 sentence-gated-writing 技能做一次段落衔接检查，先提修改建议。
+
+这段的意思清楚，主要问题是**第2句和第4句重复**：两句都在说速度和加速度记录用于描述车辆运动。第3句已经推进到两类记录的关联计划，第4句又退回介绍记录用途，打断了推进。
+
+建议做两处调整：
+
+1. **保留第2句，删去第4句。** 第2句与第1句句式平行，适合连在一起交代两类记录各自的用途；第4句没有增加新信息。
+2. **将第1、2句合成一句，用逗号连接。** 两类记录的用途紧接着呈现，随后第3句中的“两类记录”也有清楚的承接对象。这里只合并表达，不改变已确认的意思。
+
+调整后的顺序建议是：**两类记录的用途（1＋2）→ 按试验编号关联的计划（3）→ 当前进展与边界（5）**。第3句保留“后续拟”，第5句保留“已形成采集方案，尚无配对数据或试验结果”，这样不会把关联计划写成已经完成的工作，也不会扩大成果。
+
+先建议这两处，不动其余表述，也暂不拼成定稿。

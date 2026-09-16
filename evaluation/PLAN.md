@@ -4,7 +4,7 @@ Prospective protocol aligned to PRODUCT_DEFINITION.md. Freeze skill snapshots, t
 
 ## Conditions
 
-Primary comparison: ordinary iterative writing without the Skill versus adaptive collaboration with the current Skill. Same initial sources, task, model, tools, time/feedback opportunities and requested deliverable. Do not prescribe the Skill's process to the ordinary arm. A one-shot arm is an optional workflow reference, not a controlled estimate of incremental benefit. The prior strict version can be an additional diagnostic condition; its different interaction cost must be reported.
+Historical/general comparison: ordinary iterative writing without the Skill versus collaboration with the Skill. The current structure-first A/B/C protocol below supersedes earlier defaults while retaining these controls. Same initial sources, task, model, tools, time/feedback opportunities and requested deliverable. Do not prescribe the Skill's process to the ordinary arm. A one-shot arm is an optional workflow reference, not a controlled estimate of incremental benefit. The prior strict version can be an additional diagnostic condition; its different interaction cost must be reported.
 
 ## Long-horizon consistency tasks
 
@@ -48,3 +48,23 @@ The primary task is to develop a document with its author. Consistency and recov
 For each measure preserve prompts, current drafts, actual responses and reviewer rationale. Report both prose outcomes and interaction costs; use actual authors/readers to judge meaning and comprehension in effectiveness trials. Synthetic role-play is a behavior check, not a proxy for measured human benefit.
 
 Minimum development walkthrough: A scattered facts to prose; B vague discomfort to a real diagnosis and revision; C acceptance and continuation; D skip retention; E corrected purpose carried into later sections. Include an unchanged scope/recovery check from existing records when relevant, without rerunning all historical tests for every wording change. Use a fixed small number of cases and report failures rather than optimizing to a favorable score.
+
+## Structure-first sentence calibration: A / B / C
+
+Current prospective comparison:
+
+- **A — Ordinary Writing:** same model and sources, ordinary collaboration without the Skill. Do not impose the Skill's process on this arm.
+- **B — Real Human Feedback:** the Skill's Deliberate Drafting: skeleton, candidate sentence, actual author correction/acceptance, next sentence, paragraph review and integration.
+- **C — Assume-Accept Simulation:** the same Skill snapshot, model and initial materials, with explicit continuous generation as if each candidate were accepted. Internally retain skeleton, sentence checks and paragraph review. Mark feedback as absent/simulated; never count it as human approval.
+
+C tests generation without corrective author feedback. B–C measures the combined contribution and cost of that feedback opportunity, not a pure algorithmic effect isolated from extra information. Log facts or intent newly supplied by B's author. For a secondary information-matched comparison, provide those facts to all arms and label the resulting knowledge advantage and order effects; do not selectively help an arm during the primary run. Counterbalance document/order where feasible and use multiple real documents before generalizing.
+
+Freeze source packets, common section skeleton where supplied, task scope, model/settings, budgets and rubric. A and B get comparable author/time opportunities; C omits interactive feedback by design, so record the unequal interaction cost instead of claiming identical conditions. Include a fresh-author or held-out-document replication if prior familiarity could drive preference. Preserve all versions and corrections.
+
+Measure latest author-intent retention, unsupported claims, structural coherence, claim drift, revision effort, substantive meaning corrections, repeated corrections, final author preference, and actual human reading/intervention time. C has no observed author corrections during generation; its zero count is not evidence of correctness. Use source-aware blinded readers for artifact comparisons and authors for intended meaning. Judge severe factual errors separately; allow B to show no advantage or excessive interaction cost. No win claim from a single chapter or from compliance alone.
+
+## Reported simulation chapter regression
+
+The user reports an accelerated chapter produced from a shared skeleton, with boundary overexposure, repeated method explanations, a missing integral symbol and possible outcome inflation. The actual generated chapter and paired expert-front-section documents were not supplied in this update; therefore these are reported failure classes and prospective regression targets, not independently reproduced findings. The earlier uploaded v12 source cannot substitute for that generated artifact. Expert coverage is limited to the reported front sections; there is no full-chapter expert Gold Dataset.
+
+When the generated chapter is available, preserve its original, source/skeleton and an unmodified baseline; check these four concrete targets once: scope expressed where needed without repeated defensive disclaimers; section-specific repetition; formula/operator/variable/unit/table integrity in source and rendering; outputs distinguished from demonstrated suitability. A miniature formula example or synthetic walkthrough is not a reproduction of the chapter test. Stop after this bounded review unless it reveals a concrete unresolved failure.

@@ -1,8 +1,8 @@
 interface:
   display_name: Sentence-Gated Writing
-  short_description: Develop complex documents through collaborative writing
-  default_prompt: Use $sentence-gated-writing to organize these materials, draft useful
-    prose, and refine important meaning with me.
+  short_description: Structure long documents and calibrate sentence by sentence
+  default_prompt: Use $sentence-gated-writing to structure this paragraph, then draft
+    it sentence by sentence with me and integrate it into the document.
   icon_small: assets/icon.svg
   icon_large: assets/icon.svg
 policy:
