@@ -1,4 +1,4 @@
-# Evaluation plan — document consistency across revisions
+# Evaluation plan — collaborative writing and document development
 
 Prospective protocol aligned to PRODUCT_DEFINITION.md. Freeze skill snapshots, tasks, rubric, model/settings and budgets before effectiveness runs. Do not treat five design walkthroughs as five successful user trials.
 
@@ -31,3 +31,20 @@ Reader comprehension and source-backed factual accuracy remain outcome checks. B
 Behavioral acceptance: explicit scope is respected, accepted facts propagate or remaining dependencies are clearly flagged, unrelated locked wording survives, and the current draft can be recovered. No false “saved”, “approved”, or “consistent final” status. A single critical conflict can fail a task even if most checks pass.
 
 Effectiveness requires evidence across real long documents and actual author sessions, compared with ordinary iterative writing. Short synthetic regressions do not establish this. Stop after the predeclared cases; broaden only for a concrete unresolved failure. Do not keep revising cases until the Skill wins.
+
+## Collaborative development outcomes (current focus)
+
+The primary task is to develop a document with its author. Consistency and recovery remain necessary reliability checks; evaluate them alongside the following outcomes. Freeze sources, allowed inferences, reviewer questions, and stopping criteria before a comparison. Equalize evidence and feedback opportunities, not the exact generated dialogue.
+
+| Outcome | Task and observation |
+| --- | --- |
+| Co-Writing Quality | Supply scattered source facts without an outline. Evaluate whether the prose identifies the central question, organizes supported reasoning, and is usable. Record unsupported invented structure separately; an elegant invented method fails |
+| Author Calibration | Correct an initial interpretation (accuracy vs feasibility). Inspect subsequent method/results/conclusion and resumed writing without a new file. A local word replacement alone fails |
+| Guided Revision Prioritization | Use a draft with one hard error, two consequential issues and five optional refinements. Judge whether the first issue addresses the hard error and subsequent choices reflect remaining impact, without an unsolicited exhaustive list |
+| Skip Retention | Skip a discretionary refinement, continue for two turns, and check that the same issue is not reintroduced under another name. A skipped factual risk must not be labeled verified |
+| Technical Structuring | Compare source-matched writing with and without the Profile. Judge problem relationships, module responsibilities, method rationale, section structure and reader comprehension, not terminology density. Keep hypotheses distinct from implemented relationships |
+| Stopping Judgment | After substantive issues are resolved and optional items skipped, check whether the agent stops and identifies remaining factual limitations instead of generating cosmetic tasks |
+
+For each measure preserve prompts, current drafts, actual responses and reviewer rationale. Report both prose outcomes and interaction costs; use actual authors/readers to judge meaning and comprehension in effectiveness trials. Synthetic role-play is a behavior check, not a proxy for measured human benefit.
+
+Minimum development walkthrough: A scattered facts to prose; B vague discomfort to a real diagnosis and revision; C acceptance and continuation; D skip retention; E corrected purpose carried into later sections. Include an unchanged scope/recovery check from existing records when relevant, without rerunning all historical tests for every wording change. Use a fixed small number of cases and report failures rather than optimizing to a favorable score.

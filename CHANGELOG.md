@@ -1,5 +1,15 @@
 # Changelog
 
+## Unreleased — collaborative writing focus, 2026-09-16
+
+- Recenter the existing core on understanding, organizing, drafting, author calibration, and integration. No new gates.
+- Define Co-Writing, Guided Revision and Review; separate meaningful discussion units from writing length and approval requirements.
+- Add editorial prioritization, retained skip decisions, and delivery-oriented stopping.
+- Explain Sentence Gate as semantic convergence plus verification; retain shared meaning even when the latest artifact is unavailable.
+- Keep scoped propagation, canonical drafts, recovery, fact boundaries and minimal intervention as reliability mechanisms.
+- Extend the Technical Profile with source-bounded generative reasoning and evaluate collaboration outcomes alongside consistency.
+
+
 ## Unreleased — development acceptance, 2026-09-16
 
 - Reconcile affected state at each completed revision rather than waiting for final delivery.

@@ -233,3 +233,91 @@ Current file is current.md; old summary says 3 sites, 6 people each, start next 
 最小处理建议：保留原句“尚无效率对照数据，不能认定节省工时。”即使后续取得工时比较数据，也需先核对结果及适用范围；采购推广结论另需相应依据与作者对文档用途的明确调整。
 
 本次仅作事实和意图审查，未修改 current.md 或交接备注。
+
+## Collaborative writing walkthrough — 2026-09-16
+
+This is a bounded synthetic five-turn interaction with a fresh agent loaded with the revised SKILL.md and relevant references, without evaluation files or the parent conversation. User turns were supplied by the developer, not a real author. The parent inspected the actual replies. No baseline or blind scoring was used.
+
+A produced usable prose from unstructured facts without inventing implemented outputs. B prioritized the unsupported completed-dataset/accuracy claim over style. C integrated the accepted sentence and advanced to a module relationship issue without redundant approval. D respected the skip and stopped optional editing; the skipped relationship wording remains, so this does not establish a fully coherent final artifact. E carried the feasibility goal into method, current result and conclusion, retained the untested status and deferred association research; it offered text for author integration without claiming the external Word file was saved. The proposed method interprets feasibility as collection/pairing feasibility, which remains an author-calibratable formulation rather than an independently established project requirement.
+
+This tests the requested A–E interaction shapes only. It does not measure true long-document quality, retention over long gaps, human comprehension or effort, or the full one-hard/two-important/five-optional prioritization protocol in PLAN.md. Prior propagation/recovery results above concern the previous snapshot, not a fresh regression run of this revision.
+
+### A
+
+Simulated user:
+
+帮我从这些零散材料写一段项目技术方案，没有现成结构：人工评分记录参与者体验；速度与加速度记录车辆运动；计划按试验编号配对两类记录，以探索关联；目前仅有采集方案，没有配对数据、训练模型或试验结果。读者是项目评审，200字以内。
+
+Actual reply:
+
+本项目拟通过人工评分记录参与者体验，通过速度与加速度记录车辆运动，并按试验编号配对两类记录，探索车辆运动变化与体验评分之间的关联。人工评分与运动记录分别提供体验判断和运动过程信息，配对后将作为关联分析的依据。目前仅有采集方案，尚无配对数据、训练模型或试验结果，关联是否存在及其具体表现仍需后续试验分析。
+
+
+### B
+
+Simulated user:
+
+我又写了一版，这段感觉不对，陪我一项项改。最新文本：人工评分、车辆运动记录与数据配对是项目的三个模块，分别独立开展。本项目已完成配对数据集，证明预测模型准确。当前成果为采集方案，下一步准备开展采集。事实仍以之前材料为准。
+
+Actual reply:
+
+先改第二句：
+
+> 本项目已完成配对数据集，证明预测模型准确。
+
+这句把计划写成了成果。按现有材料，目前只有采集方案，尚无配对数据、训练模型或试验结果，因此不能声称模型准确。
+
+建议改为：
+
+> 项目拟按试验编号配对人工评分与车辆运动记录，探索车辆运动与参与者体验之间的关联。
+
+这样交代了下一步的技术工作，也保留了“探索关联”的研究目标。当前进展由后一句说明。
+
+
+### C
+
+Simulated user:
+
+认可，继续。
+
+Actual reply:
+
+第二句已按认可的版本纳入当前稿。接着看第一句：
+
+> 人工评分、车辆运动记录与数据配对是项目的三个模块，分别独立开展。
+
+这里把两类记录的采集与后续配对并列为独立模块，掩盖了它们的衔接关系：配对需要以两类记录为基础。建议改为：
+
+> 项目拟通过人工评分记录参与者体验，通过速度与加速度记录车辆运动，为后续数据配对提供两类记录。
+
+这样先说明两类记录各自的作用，再由已改好的第二句说明如何配对及其目的。
+
+
+### D
+
+Simulated user:
+
+这个暂时不用改，跳过。继续看看还有没有真正影响交付的问题，别为了润色反复改。
+
+Actual reply:
+
+首句按你的要求保留，暂不再讨论。其余内容没有发现新的实质问题：第二句已改为计划开展的关联探索；第三句准确说明目前只有采集方案、采集尚待开展，应当保留。
+
+本轮到此停止，不再做措辞润色。当前稿已纳入认可的第二句修改，首句保留原文。
+
+
+### E
+
+Simulated user:
+
+还有一个根本纠正：之前那句“证明预测模型准确”把项目本质写偏了，本阶段是验证技术可行性。关联研究是后续方向，不是本阶段要证明的结果。我在 Word 里又改了一点，先不用传。按这个理解给我方法、当前结果、总结各一句，别重新讨论刚才跳过的首句。仍然只有采集方案，无数据、无模型、无试验结果。
+
+Actual reply:
+
+本阶段目标是验证技术可行性；关联研究属于后续方向。以下三句供你整合到 Word：
+
+方法：本阶段拟采集记录参与者体验的人工评分及记录车辆运动的速度、加速度数据，并按试验编号配对，以检验采集与配对流程的技术可行性。
+
+当前结果：目前仅形成采集方案，尚无数据、模型或试验结果，技术可行性仍待验证。
+
+总结：项目后续需通过试验检验方案能否实施，体验评分与车辆运动的关联研究作为后续方向，本阶段尚不作关联判断。

@@ -78,3 +78,28 @@ If a locked background sentence describes an API, explain that the implementatio
 ## Resume with a stale note
 
 Read the current artifact and latest source update before treating an old handoff as authoritative. If the author changed a pilot from three sites to two, preserve the new scope and any unrelated author additions. Close rejected pending wording, synchronize the compact note, and identify the current file in the handoff. Do not infer approval or factual truth solely from a file modification time.
+
+## Co-Writing from scattered material (A)
+
+Facts: ratings record experience; recordings contain speed and acceleration; a paired dataset is planned; no model has been trained. User: “帮我写一段技术路线，没有现成结构。”
+Write a passage that assigns each source a role, motivates pairing, and names the intended output. A planned dataset cannot become a trained predictor or a validated fusion system. Use a proposed interpretation only as such. Do not stop at an outline when useful prose is possible.
+
+## Guided Revision: “这段感觉不对” (B)
+
+Current text: “项目有人工评分、运动记录和配对数据三个模块。” Sources establish that records and ratings will be paired by trial ID to explore associations.
+Assistant: “这里列了三项内容，但没有交代配对数据从哪里来、用于什么。我建议把关系写出来：项目拟按试验编号关联人工评分与车辆运动记录，形成配对数据，用于探索运动特征与体验评价之间的关系。”
+This is a usable proposal with a reason, not a demand for all gate fields. Retain the planned status.
+
+## Guided acceptance and skip (C–D)
+
+There is one pending revision. User: “认可，继续。”
+Integrate the accepted revision under the current scope, carry its meaning forward, then present the next substantive issue if one exists. Do not ask whether “认可” really means acceptance. In Review, “继续” authorizes continuing findings, not editing the draft.
+
+User: “这个没必要，跳过。”
+Retain the editorial scope decision and move on. If the skipped item is optional detail, do not bring it back as a differently worded suggestion. If it is a material factual conflict, leave its evidence status unresolved; neither repeatedly argue nor call it verified. After substantive issues are resolved, say further edits would be optional and stop.
+
+## Correcting the purpose without the latest file (E)
+
+Old agent interpretation: accuracy validation. User: “不是验证算法准确率，是验证技术可行性。我在 Word 里又改了一点，先不用传。”
+Assistant: “明白，当前要说明流程是否可实施，而不是算法有多准。后面的方案、结果和总结都按这个目标组织。可以先写：本阶段以技术可行性为验证目标，围绕实施过程及其现有证据说明进展与限制。”
+Ask for concrete source details only before stating particular steps were executed or passed. Keep the superseded interpretation out of later drafting. Do not claim Word was updated or refuse all useful work until it is uploaded.

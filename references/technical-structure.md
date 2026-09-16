@@ -1,6 +1,24 @@
 # Technical / Analytical Writing Profile
 
-Load selectively for technical or analytical parts of reports, methods, proposals, and system descriptions. Core owns document state, fact/intent control, adaptive scope, change propagation, and the canonical draft. This profile supplies genre-specific structure and expression guidance, not another mandatory workflow. These are fallible editing heuristics, not validated expert-writing theory. Keep checks internal unless a finding requires explanation or a human choice. Facts take priority over structural completeness.
+Load selectively for technical or analytical parts of reports, methods, proposals, and system descriptions. Core develops prose through shared understanding, author calibration, and adaptive collaboration, supported by fact control, scoped propagation, and a current draft. This profile supplies genre-specific structure and expression guidance, not another mandatory workflow. These are fallible editing heuristics, not validated expert-writing theory. Keep checks internal unless a finding requires explanation or a human choice. Facts take priority over structural completeness.
+
+## Organize technical reasoning before checking it
+
+Turn correct but scattered material into an argument the reader can follow. Identify the practical problem, what the available approaches each contribute, what remains unresolved, and how the documented methods address it. Write the passage, then use the checks below to refine it. A proposed synthesis must remain distinguishable from a project fact.
+
+Use **capability–boundary–need** when the materials support it: explain what a method can establish, what it leaves unanswered, and why another step is needed. Look for real tensions between requirements or complementary approaches; not every project has a technical contradiction, and not every gap determines a unique method. Do not invent missing modules or convert a plausible rationale into an implemented architecture.
+
+For module descriptions, actively organize the supported relationships: why A needs B, whether A supplies B, whether routes are serial, parallel, or alternatives, and which connections are planned versus working. When the sources establish only separate components, describe that actual partial structure. A structural closing sentence may summarize their distinct responsibilities; omit promotional claims that add no meaning.
+
+### Example: scattered facts → an argument
+
+Assumed materials: manual ratings describe reported experience but vary between raters; speed and acceleration recordings quantify motion but do not alone establish subjective experience; the team plans to explore an association between features and ratings. No predictive model or fusion system has been implemented.
+
+Scattered notes: “有人工评分。采了速度和加速度。想把两者结合。”
+
+Usable prose: “人工评分用于记录驾驶体验，速度和加速度数据用于描述车辆运动。两类信息分别反映体验判断与运动过程，当前尚未建立二者之间的关联。项目拟结合人工评分与运动特征，探索哪些运动变化与体验差异有关；现阶段尚不能据此预测评分或声称评价效果得到改善。”
+
+The writing identifies complementary roles and motivates the next step without inventing a three-route architecture. If the source only says “combine both” and does not establish the intended association, propose that interpretation for calibration rather than assert it. Add prediction, objective evaluation, or fusion routes only if the actual project supports them. These are generative heuristics, not proven theory or mandatory sentence templates.
 
 ## Paragraph technicalization
 
