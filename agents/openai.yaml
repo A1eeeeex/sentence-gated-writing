@@ -1,0 +1,9 @@
+interface:
+  display_name: Sentence-Gated Writing
+  short_description: Keep long documents coherent through collaborative revisions
+  default_prompt: Use $sentence-gated-writing to develop this document with me, maintain
+    the current draft, and propagate substantive changes across sections.
+  icon_small: assets/icon.svg
+  icon_large: assets/icon.svg
+policy:
+  allow_implicit_invocation: true
